@@ -22,7 +22,7 @@ pipeline {
              }         
          stage('Upload to AWS') {
               steps {
-                  withAWS(region:'us-east-2',credentials:'owuser') {
+                  withAWS(region:'ap-southeast-1',credentials:'owuser') {
                   sh 'echo "Uploading content with AWS creds"'
                       s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'Index.html', bucket:'myudacitywebsite')
                   }
