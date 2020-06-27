@@ -1,32 +1,8 @@
-pipeline {
-     agent any
-     stages {
-         stage('Build') {
-             steps {
-                 sh 'echo "Hello World"'
-                 sh '''
-                     echo "Multiline shell steps works too"
-                     ls -lah
-                 '''
-             }
-         }
-         stage('Lint HTML') {
-              steps {
-                  sh 'tidy -q -e Index.html'
+pipeline{
+        agent any
+        stages {
+            stage ('Red Dployment'){
+              steps{
+                sh 'echo "Hello World Red Deployment"'
               }
-         }
-         stage('Security Scan') {
-              steps { 
-                 aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail',outputFormat: 'html'
-             }
-             }         
-         stage('Upload to AWS') {
-              steps {
-                  withAWS(region:'ap-southeast-1',credentials:'owuser') {
-                  sh 'echo "Uploading content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'Index.html', bucket:'myudacitywebsite')
-                  }
-              }
-         }
-     }
-}
+            }
