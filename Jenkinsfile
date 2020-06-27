@@ -1,8 +1,11 @@
 pipeline{
         agent any
         stages {
-            stage ('Red Dployment'){
+            stage ('My First Code'){
               steps{
-                sh 'echo "Hello World Red Deployment"'
+                sh 'echo "Hello World"'
               }
             }
+            
+        }
+    }
