@@ -1,8 +1,11 @@
 pipeline{
         agent any
         stages {
-            stage ('Execute the Blue Line'){
+            stage ('My First Code'){
               steps{
-                sh 'echo "Hello World in BLUE Line Deployment..."'
+                sh 'echo "Hello World"'
               }
             }
+            
+        }
+    }
