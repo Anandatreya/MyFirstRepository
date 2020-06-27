@@ -3,7 +3,7 @@ pipeline{
         stages {
             stage ('My First Code'){
               steps{
-                sh 'echo "Hello World"'
+                sh 'echo "Hello World Red Deployment"'
               }
             }
             
