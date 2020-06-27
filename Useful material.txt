@@ -1,0 +1,11 @@
+username: jenkins
+password:myjenkinspassword 
+
+Jenkins DOckerhttps://www.youtube.com/watch?v=gdbA3vR2eDs
+https://www.youtube.com/watch?v=gdbA3vR2eDs
+
+
+Jenkins CloudFormation Scripts:
+https://www.youtube.com/watch?v=XnRqGMSCQyY
+https://www.youtube.com/watch?v=eoiSBAtRxZg
+
