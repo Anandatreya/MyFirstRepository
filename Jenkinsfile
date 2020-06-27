@@ -1,8 +1,8 @@
 pipeline{
         agent any
         stages {
-            stage ('Execute the Red Line'){
+            stage ('Execute the Blue Line'){
               steps{
-                sh 'echo "Hello World in RED Line Deployment..."'
+                sh 'echo "Hello World in BLUE Line Deployment..."'
               }
             }
