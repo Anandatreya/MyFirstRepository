@@ -1,0 +1,37 @@
+##Create AWS Network resources
+
+CreateAWSResource.bat myudagramnetworkstack UdagramNetwork.yml UdagramNetwork-parameters.json
+
+
+## Update AWS Network resource
+UpdateAWSResource.bat myudagramnetworkstack UdagramNetwork.yml UdagramNetwork-parameters.json
+
+
+## Create AWS Server resources
+CreateAWSResource.bat myudagramserverstack UdagramServer_test.yml Udagramserver-parameters.json
+
+CreateAWSResource.bat myudagramserverstack UdagramServer.yml Udagramserver-parameters.json --capabilities =CAPABILITY_NAMED_IAM
+
+## Update AWS Server Resource
+
+UpdateAWSResource.bat myudagramserverstack UdagramServer_test.yml Udagramserver-parameters.json
+
+UpdateAWSResource.bat myudagramserverstack UdagramServer.yml Udagramserver-parameters.json --capabilities ='CAPABILITY_NAMED_IAM' 
+
+UpdateAWSResource.bat myudagramserverstack UdagramServer.yml Udagramserver-parameters.json CAPABILITY_NAMED_IAM CAPABILITY_IAM
+
+## Update AWS DB resource
+
+UpdateAWSResource.bat ourdemoserverstack demoDB.yml database-parameters.json
+
+## 
+
+CreateAWSResource.bat ourdemostoragestack demoDB.yml database-parameters.json
+
+
+
+##Delete a stack
+
+DeleteAWSResource.bat myudagramserverstack
+
+DeleteAWSResource.bat myudagramnetworkstack

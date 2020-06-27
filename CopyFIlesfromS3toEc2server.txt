@@ -1,0 +1,25 @@
+#1 Public server #1
+ssh ubuntu@54.200.161.148 -i sshkeypair.pem
+
+#2 Install AMAZON CLI
+sudo apt-get install awscli
+
+#3 Confgure keys
+aws configure
+
+AWS Access Key ID [None]: XXXX
+AWS Secret Access Key [None]: XXXXX
+Default region name [None]: us-west-2
+Default output format [None]:
+
+aws s3 ls s3://myudacitywebsite
+
+cd /home/ubuntu
+aws s3 cp s3://myudacitywebsite/index.html .
+
+sudo cp -r index.html /var/www/html
+
+CHeck configuration from web browser
+
+54.200.161.148:80
+
